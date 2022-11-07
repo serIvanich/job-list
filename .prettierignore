@@ -1,0 +1,12 @@
+.idea
+.config
+node_modules/*
+build/*
+config/*
+public/*
+scripts/*
+src/react-app-env.d.ts
+src/reportWebVitals.ts
+
+/.eslintrc.json
+/.prettierrc.json
