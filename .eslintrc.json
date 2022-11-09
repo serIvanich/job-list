@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node":true
   },
   "extends": [
     "eslint:recommended",
@@ -25,20 +26,16 @@
       "error",
       { "extensions": [".jsx", ".tsx"] }
     ],
-    "autofix/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_",
-        "ignoreRestSiblings": true,
-        "destructuredArrayIgnorePattern": "^_"
-      }
-    ],
+    
     "@typescript-eslint/consistent-type-imports": [
       "error",
       {
         "prefer": "type-imports"
       }
     ]
+    
+    
+    
   },
   "settings": {
     "import/resolver": {
@@ -48,3 +45,15 @@
     }
   }
 }
+
+
+//??conflict with enum
+//"autofix/no-unused-vars": [
+//   "error",
+//   {
+    
+//     "argsIgnorePattern": "^_",
+//     "ignoreRestSiblings": true,
+//     "destructuredArrayIgnorePattern": "^_"
+//   }
+// ],
