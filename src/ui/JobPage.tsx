@@ -1,3 +1,6 @@
-import React from "react";
+import React from 'react'
 
-export const JobPage = () => <div>job page</div>
+export const JobPage = () => {
+  console.log('jobPage')
+  return <div>job page</div>
+}

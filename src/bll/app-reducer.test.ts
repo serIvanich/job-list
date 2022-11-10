@@ -1,8 +1,5 @@
 import type { AppStateType } from './app-reducer'
-import { setAppError } from './app-reducer'
-import { getJobList } from './app-reducer'
-
-import { appReducer, setAppStatus } from './app-reducer'
+import { action, appReducer } from './app-reducer'
 
 let startState: AppStateType
 
@@ -15,7 +12,7 @@ beforeEach(() => {
 })
 
 test('correct status should be set', () => {
-  const endState = appReducer(startState, setAppStatus('loading'))
+  const endState = appReducer(startState, action.setAppStatus('loading'))
 
   expect(endState.appStatus).toBe('loading')
 })
@@ -39,14 +36,14 @@ test('correct data should be set in state', () => {
       employment_type: ['string', 'number', 'boolean'],
     },
   ]
-  const endState = appReducer(startState, getJobList(list))
+  const endState = appReducer(startState, action.getJobList(list))
 
   expect(endState.jobList[0].name).toBe('First')
   expect(endState.jobList[0].id).toBe('abc')
 })
 
 test('correct error should be set', () => {
-  const endState = appReducer(startState, setAppError('error'))
+  const endState = appReducer(startState, action.setAppError('error'))
 
   expect(endState.error).toBe('error')
 })
