@@ -31,7 +31,7 @@ test('correct data should be set in state', () => {
       location: { lat: 1234, long: 5678 },
       pictures: ['black square', 'white page'],
       createAt: '09.11.22',
-      updateAt: '09.11.22',
+      updatedAt: '09.11.22',
       description: 'it is ok',
       employment_type: ['string', 'number', 'boolean'],
     },

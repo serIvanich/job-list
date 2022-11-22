@@ -6,11 +6,9 @@ import { JobList } from './JobList'
 import { JobPage } from './JobPage'
 
 export const App = () => {
-  
   const [state, dispatch] = useReducer(appReducer, initialState)
   useEffect(() => {
     if (state.jobList.length === 0) {
-      
       fetchJobList(dispatch)
     }
   }, [state.jobList.length])

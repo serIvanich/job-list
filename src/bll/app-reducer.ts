@@ -68,7 +68,6 @@ export const fetchJobList = async (dispatch: React.Dispatch<ActionTypes>) => {
   } catch (e) {
     console.log(e)
     dispatch(action.setAppStatus('failed'))
-
   }
 }
 
@@ -84,7 +83,7 @@ export type JobType = {
   location: LocationType
   pictures: string[]
   createAt: string
-  updateAt: string
+  updatedAt: string
   description: string
   employment_type: string[]
 }
@@ -103,4 +102,3 @@ export type SetAppStatusActionType = ReturnType<typeof action.setAppStatus>
 export type SetAppErrorActionType = ReturnType<typeof action.setAppError>
 export type GetJobListActionType = ReturnType<typeof action.getJobList>
 export type ActionTypes = GetJobListActionType | SetAppStatusActionType | SetAppErrorActionType
-
